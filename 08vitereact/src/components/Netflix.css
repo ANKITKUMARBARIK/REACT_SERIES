@@ -1,0 +1,46 @@
+.card{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+img{
+    width: 100%;
+}
+
+.card-content{
+    padding: 3.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.card-heading{
+    margin-bottom: 3.2rem;
+    color: whitesmoke;
+}
+
+.super_hit{
+    background: #7dcea0;
+    color: black;
+}
+
+.average{
+    background: #f7d6cf;
+    color: black;
+}
+
+.ratingcss{
+    padding: 0.3rem 1.8rem;
+    color: #000;
+    margin-left: 1.2rem;
+    border-radius: 100rem;
+    -webkit-border-radius: 100rem;
+    -moz-border-raius: 100rem;
+    -ms-border-raius: 100rem;
+    -o-border-raius: 100rem;
+}
+
+.timepass{
+    border: 2rem solid red;
+}
