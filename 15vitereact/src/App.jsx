@@ -14,7 +14,7 @@ function App() {
       {/* <Timer /> */}
       {/* <DataFetcher /> */}
       {/* <Resize /> */}
-      <MultiEffect />
+      {/* <MultiEffect /> */}
     </>
   )
 }
