@@ -1,0 +1,23 @@
+ul{
+    list-style: none;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20rem;
+}
+
+.laal{
+    color: red;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.laal:hover{
+    color: aqua;
+}
+
+.active-link{
+    color: aqua;
+}
