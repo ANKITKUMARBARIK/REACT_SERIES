@@ -1,0 +1,14 @@
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.active-link{
+    color: aqua;
+}
