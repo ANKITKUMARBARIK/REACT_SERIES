@@ -21,24 +21,65 @@ import { useMemo } from 'react'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count1, setCount1] = useState(0)
+  const [count2, setCount2] = useState(0)
   const [input, setInput] = useState(0)
 
-  function expensiveTask(num) {
-    console.log('Inside expensive task ', Date.now())
+  const handleClick1 = () => {
+    console.log('mein atak rha hu bhai ')
+    setCount1(count1 + 1)
+  }
+
+  const handleClick2 = () => {
+    console.log('but mein nhi atakne wala')
+    setCount2(count2 + 1)
+  }
+
+  const expensiveFunc = () => {
+    console.log('expensive calc functions')
+    let total = 0
+    for (let i = 1; i < 1000000000; i++) {
+      total += i
+    }
+    return total
+  }
+  // let sum = expensiveFunc()
+  let sum = useMemo(() => {
+    expensiveFunc()
+  }, [count1])
+
+  // 
+
+  const handleInput = (e) => {
+    console.log('input re-render ', Date.now())
+    setInput(e.target.value)
+  }
+
+  const expensiveTask = (num) => {
+    console.log('expensive task')
+    for (let i = 1; i < 1000000000; i++) { }
     return num * 2
   }
 
-  useMemo(() => {
+  let check = useMemo(() => {
     expensiveTask(input)
-  }, [input])
+  },[input])
+
+
 
   return (
     <>
-      <h1>Count : {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Click</button>
+      <h1>CountOne : {count1}</h1>
+      <button onClick={handleClick1}>ClickOne</button>
       <br /><br />
-      <input onChange={(e) => setInput(e.target.value)} type="number" />
+      <h1>CountTwo : {count2}</h1>
+      <button onClick={handleClick2}>ClickTwo</button>
+      <br /><br />
+
+      <input onChange={handleInput} type="number" />
+      <h2>{input}</h2>
+      <h2>{sum}</h2>
+      <h2>{check}</h2>
     </>
   )
 }
